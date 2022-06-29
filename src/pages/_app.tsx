@@ -1,7 +1,7 @@
-import { AppProps } from "../../node_modules/next/dist/shared/lib/router/router"
- 
+import { AppProps } from "../../node_modules/next/dist/shared/lib/router/router";
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
