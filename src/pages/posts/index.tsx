@@ -53,6 +53,8 @@ export default function Posts() {
 export const getStaticProps: GetStaticProps = async () => {
   const prismic = getPrismicClient();
 
+  console.log("prismic", prismic);
+
   const response = await prismic?.query(
     [Prismic?.predicates?.at("document.type", "publication")],
     {
@@ -61,6 +63,7 @@ export const getStaticProps: GetStaticProps = async () => {
     }
   );
 
+  // não foi possível trazer os dados pois o prismic hoje funciona diferente
   console.log("response", response);
 
   return {
